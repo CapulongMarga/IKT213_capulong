@@ -71,7 +71,6 @@ def main():
     if image_to_align is None:
         raise FileNotFoundError("Alignment image not found")
 
-
     harris_corners_detected_img = detect_harris_corners(reference_image)
     cv2.imwrite(os.path.join(SOLUTIONS_DIR, "harris.png"), harris_corners_detected_img)
     print("Harris corners image saved")
@@ -84,7 +83,6 @@ def main():
     cv2.imwrite(os.path.join(SOLUTIONS_DIR, "aligned.png"), aligned_img)
     cv2.imwrite(os.path.join(SOLUTIONS_DIR, "matches.png"), matched_img)
     print("Aligned and matched image saved")
-
 
 if __name__ == "__main__":
     main()
